@@ -1,0 +1,135 @@
+:root {
+  --md-accent-bg-color: #3B474D;
+  --md-accent-fg-color: #bbbbcc;
+  
+  --md-primary-bg-color: #FFFFFF;
+  --md-primary-fg-color: #546d78;
+  
+  --md-typeset-a-color: #72bad8;
+}
+
+div.imageblock
+{
+	display:inline-block;
+	background-color: var(--md-primary-fg-color);
+	padding: 4px;
+	margin: 4px;
+	margin-top: 8px;
+}
+
+div.imageblock span.title
+{
+	font-weight:bold;
+	font-size:1.2em;
+	text-align:center;
+	color:var(--md-primary-bg-color);
+	line-height: 1.0em;
+	
+	padding: 4px;
+}
+
+blocknote::before
+{
+	content: "Note:";
+	font-weight: bold;
+	font-size: 1.0em;
+	display: block;
+}
+
+blocknote::after
+{
+}
+
+blocknote
+{
+	display: block;
+	background-color: var(--md-accent-bg-color);
+	color: var(--md-accent-fg-color);
+	padding: 10px 20px;
+	margin: 8px 0px;
+	font-size: 0.9em;
+}
+
+blocktext
+{
+	display: block;
+	background-color: var(--md-accent-bg-color);
+	color: var(--md-accent-fg-color);
+	padding: 10px 20px;
+	margin: 8px 0px;
+	font-size: 0.9em;
+}
+
+subnote
+{
+	font-style: italic;
+	filter: brightness(0.5);
+}
+
+.md-grid {
+  max-width: initial;
+}
+
+p,li
+{
+	color: #ddEEEE;
+}
+
+.md-typeset a
+{
+	font-weight: bold;
+	color: #72bad8;
+}
+
+.md-typeset a:hover
+{
+	font-weight: bold;
+	color: #eeeeee;
+}
+
+.md-nav__item .md-nav__link--active:before
+{
+	content: "#";
+}
+
+.md-nav__item .md-nav__link--active
+{
+	font-weight: bold;
+    color: #7dd9ff;
+}
+
+.md-typeset h2, .md-typeset h3
+{
+	font-weight: bold;
+}
+
+.md-typeset h1
+{
+	font-size: 3.0em;
+	margin: 4px;
+	padding: 4px;
+}
+
+gamepad
+{
+	font-weight: bold;
+	
+	background-color: #99ccff;
+	color: var(--md-accent-bg-color);
+	
+	font-size: 0.9em;
+	padding: 2px 4px;
+	margin: 0px 2px;
+}
+
+key
+{
+	font-weight: bold;
+	
+	background-color: #ccDDcc;
+	color: var(--md-accent-bg-color);
+	
+	font-size: 0.9em;
+	padding: 2px 4px;
+	margin: 0px 2px;
+}
