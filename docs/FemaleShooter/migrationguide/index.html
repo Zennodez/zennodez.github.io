@@ -1,0 +1,1216 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>Migration Guide - Zennodez Arts - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migration-guide-to-130" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zennodez Arts - Documentation" class="md-header__button md-logo" aria-label="Zennodez Arts - Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zennodez Arts - Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migration Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zennodez Arts - Documentation" class="md-nav__button md-logo" aria-label="Zennodez Arts - Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Zennodez Arts - Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Female Shooter
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Female Shooter" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Female Shooter
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VersionHistory/" class="md-nav__link">
+        Version History
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Migration Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Migration Guide
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-components" class="md-nav__link">
+    Required Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gun-equipunequip-functions" class="md-nav__link">
+    Gun Equip/Unequip Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shooting-functions" class="md-nav__link">
+    Shooting Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aim-mode" class="md-nav__link">
+    Aim Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashlight" class="md-nav__link">
+    Flashlight
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#muzzle-flash-effect" class="md-nav__link">
+    Muzzle Flash Effect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-equipments" class="md-nav__link">
+    Changing Equipments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-animations" class="md-nav__link">
+    Custom Animations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notify-events" class="md-nav__link">
+    Notify Events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-blueprints" class="md-nav__link">
+    Animation Blueprints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shooting-pattern" class="md-nav__link">
+    Shooting Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiplayer-replication-not-supported" class="md-nav__link">
+    Multiplayer Replication (Not Supported)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templateoverview/" class="md-nav__link">
+        Template Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/" class="md-nav__link">
+        Adding Components
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sockets/" class="md-nav__link">
+        Preparing Sockets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functionalities/" class="md-nav__link">
+        Adding Functionalities
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupanimsystem/" class="md-nav__link">
+        Animation Setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customanim/" class="md-nav__link">
+        Replacing Animations
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Female Shooter 1.2.0
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Female Shooter 1.2.0" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Female Shooter 1.2.0
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/01/" class="md-nav__link">
+        Template Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/02/" class="md-nav__link">
+        Preparing Sockets and Skeleton
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/03/" class="md-nav__link">
+        Adding Required Components
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/04/" class="md-nav__link">
+        Adding Template Functionalities
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/05/" class="md-nav__link">
+        Setting up the Animation System
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/06/" class="md-nav__link">
+        Using Custom Animations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" >
+      
+      <label class="md-nav__link" for="__nav_3_8">
+        Anim Notify
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Anim Notify" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Anim Notify
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/GunEquipNormal/" class="md-nav__link">
+        Anim_GunEquipNormal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/GunUnequipNormal/" class="md-nav__link">
+        Anim_GunUnequipNormal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/GunEquipWithSpin/" class="md-nav__link">
+        Anim_GunEquipWithSpin
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/GunUnequipWithSpin/" class="md-nav__link">
+        Anim_GunUnequipWithSpin
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/GunShootLeftArm/" class="md-nav__link">
+        Anim_GunShoot_LeftArm
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/GunShootRightArm/" class="md-nav__link">
+        Anim_GunShoot_RightArm
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/JumpStart/" class="md-nav__link">
+        Blend_JumpStart
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/JumpLand/" class="md-nav__link">
+        Anim_JumpLand
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/Roll/" class="md-nav__link">
+        Blend_Roll
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/AnimNotify/Somersault/" class="md-nav__link">
+        Blend_Somersault
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/ModifySocketNames/" class="md-nav__link">
+        Modify Socket Names
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FemaleShooter_1_2_0/CameraSwitcher/" class="md-nav__link">
+        Camera Switcher
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Grapple Gear - Prototype Version
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Grapple Gear - Prototype Version" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Grapple Gear - Prototype Version
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GrappleGearProto/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Guides/AddingSockets/" class="md-nav__link">
+        Adding Sockets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Guides/ConfigureDoubleJump/" class="md-nav__link">
+        Configure Double Jump
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Guides/RetargetingPreparation/" class="md-nav__link">
+        Retargeting Preparation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-components" class="md-nav__link">
+    Required Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gun-equipunequip-functions" class="md-nav__link">
+    Gun Equip/Unequip Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shooting-functions" class="md-nav__link">
+    Shooting Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aim-mode" class="md-nav__link">
+    Aim Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashlight" class="md-nav__link">
+    Flashlight
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#muzzle-flash-effect" class="md-nav__link">
+    Muzzle Flash Effect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-equipments" class="md-nav__link">
+    Changing Equipments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-animations" class="md-nav__link">
+    Custom Animations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notify-events" class="md-nav__link">
+    Notify Events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-blueprints" class="md-nav__link">
+    Animation Blueprints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shooting-pattern" class="md-nav__link">
+    Shooting Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiplayer-replication-not-supported" class="md-nav__link">
+    Multiplayer Replication (Not Supported)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="migration-guide-to-130">Migration Guide to 1.3.0</h1>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>This article is intended for those who have previously used Female Shooter version 1.2.0 in their project.  </p>
+<p>There are several new features that was added to 1.3.0, most of them were added to implement the dual shooting/projectile mechanism to the template as well as to facilitate a more modular approach to the system as a whole.</p>
+<p>If you're new to the package, you can try skipping the migration guide for now and move to template overview and guide on the <a href="../templateoverview" title="Template Overview">next page</a>.  </p>
+<hr />
+<h2 id="required-components">Required Components</h2>
+<p>In Female Shooter 1.3.0, the functionalities are mostly separated into 2 components.</p>
+<ul>
+<li><strong>GunnerGirlComponent</strong>, which handles most of the locomotion</li>
+<li><strong>TwinGunHandler</strong>, which handles parts related to the shooting mechanism</li>
+</ul>
+<p><strong>CameraSwitcher</strong> also take a slightly larger role to handle the camera aspect of the character, specifically the aim function <subnote>(previously not implemented in 1.2.0)</subnote></p>
+<p><blocknote>
+The components can be found in the <strong>Content/FemaleShooter/Blueprint/Component</strong> folder.
+</blocknote></p>
+<p><img alt="RequiredComponent" src="../../images/FemaleShooter/requiredcomponent.jpg" title="RequiredComponent" /></p>
+<p>To showcase how to use these components, please check inside the <strong>Content/FemaleShooter/Blueprint/Character</strong> folder.<br />
+You will find 2 Character Blueprints there,</p>
+<ul>
+<li>The <strong>GunnerGirl_Character</strong>, which serves as an example of how to use the full functionalities of the package,</li>
+<li>And the <strong>ThirdPersonModCharacter</strong>, which serves as an example on how to add only the dual gun shooting mechanism to your existing character.</li>
+</ul>
+<p><img alt="CharacterBPLocation" src="../../images/FemaleShooter/characterbplocation.jpg" title="CharacterBPLocation" /></p>
+<p>You can check either one of these character blueprints to learn how to implement the FemaleShooter functionalities into a character.<br />
+For this guide, we will focus on the changes that have been implemented into the <strong>GunnerGirl_Character</strong> blueprint.<br />
+Open the blueprint file and head to the event graph, the changes from 1.2.0 to 1.3.0 will be listed in the sections below.</p>
+<hr />
+<h2 id="gun-equipunequip-functions">Gun Equip/Unequip Functions</h2>
+<p>In 1.2.0, the Gun Equip/Unequip functions was previously part of the <strong>GunnerGirlComponent</strong>.<br />
+There was some limitations before where the character will stop moving when equip/unequip functions are called.  </p>
+<p>In 1.3.0, they are now assigned to <strong>TwinGunHandler</strong>. <br />
+No limitations are present in the current version, character can equip/unequip their weapons while on the move.</p>
+<p><img alt="EquipChange" src="../../images/FemaleShooter/equipchange.jpg" title="EquipChange" /></p>
+<hr />
+<h2 id="shooting-functions">Shooting Functions</h2>
+<p>Shooting now produces both a muzzle flash and a projectile that can affect the target that it hits.<br />
+The hand and arm animations of the character have also been adjusted to follow the direction of where the shot is directed.</p>
+<p>In 1.3.0, the implementation of the functions was relocated from <strong>GunnerGirlComponent</strong> to <strong>TwinGunhandler</strong>.<br />
+The function names have also been updated,</p>
+<ul>
+<li><fx>Shoot</fx> -&gt; <fx>StartShooting</fx></li>
+<li><fx>UnShoot</fx> -&gt; <fx>StopShooting</fx></li>
+</ul>
+<p><img alt="ShootingChange" src="../../images/FemaleShooter/shootingchange.jpg" title="ShootingChange" /></p>
+<hr />
+<h2 id="aim-mode">Aim Mode</h2>
+<p>Aim Mode is currently available from the CameraSwitcher component.<br />
+To use this, you will first need to call <fx>RegisterAimCamera</fx> to define which camera would be allowed to perform the Aim action.</p>
+<p><img alt="AimCameraSetup" src="../../images/FemaleShooter/AimCameraSetup.jpg" title="AimCameraSetup" /></p>
+<p>You can then use the following functions to activate/deactivate the AimMode</p>
+<p><img alt="AimCamera" src="../../images/FemaleShooter/AimCamera.jpg" title="AimCamera" /></p>
+<hr />
+<p>You will also need to call some setup functions before the game starts to ensure that TwinGunHandler and CameraSwitcher can communicate with each other.<br />
+An example setup can be found in the Event Graph of the GunnerGirl_Character.  </p>
+<p><img alt="CameraSwitcherNode2" src="../../images/FemaleShooter/CameraSwitcherNode2.jpg" title="CameraSwitcherNode2" /></p>
+<hr />
+<h2 id="flashlight">Flashlight</h2>
+<p>Flashlight is available since 1.3.0.  </p>
+<p>It is used by adding the <strong>FlashlightComponent</strong> to an actor.<br />
+GunnerGirl_Character, RevolverGun, and Handgun each have a FlashlightComponent attached to them.  </p>
+<p><img alt="FlashlightComponent" src="../../images/FemaleShooter/FlashlightComponent.jpg" title="FlashlightComponent" /></p>
+<p>GunnerGirlComponent also comes with a set of functions that can be used to control the flashlights that is attached to the character and the guns.<br />
+Guide on how to use these functions can be found <a href="../flashlight" title="Flashlight">here</a>.  </p>
+<hr />
+<h2 id="muzzle-flash-effect">Muzzle Flash Effect</h2>
+<p>Previously, in 1.2.0, Muzzle Flash effect was part of the <strong>GunnerGirlComponent</strong>.<br />
+It was customizable by going to the Details tab of GunnerGirlComponent and modifying the value of <vr>MuzzleFlashParticle</vr>. </p>
+<p>In 1.3.0, <vr>MuzzleFlashParticle</vr> is now part of the <vr>AmmoData</vr> value, a custom dataset object that controls various settings related to the projectile.<br />
+AmmoData can be customized by going to the Details tab of TwinGunhandler and changing the value of <vr>AmmoData</vr>.  </p>
+<p><img alt="MuzzleEffect" src="../../images/FemaleShooter/muzzleeffect.jpg" title="MuzzleEffect" /></p>
+<p>For details on how to adjust the muzzle flash effect from AmmoData, see <a href="../ammodata" title="Ammo Data Setup">Ammo Data Setup</a>.  </p>
+<hr />
+<h2 id="changing-equipments">Changing Equipments</h2>
+<p>In 1.2.0, there are 4 equipments that can be assigned to the character.</p>
+<ul>
+<li><vr>Left Gun Class</vr></li>
+<li><vr>Right Gun Class</vr></li>
+<li><vr>Left Holster Class</vr></li>
+<li><vr>Right Holster Class</vr></li>
+</ul>
+<p><img alt="Equipment120" src="../../images/FemaleShooter/Equipment120.jpg" title="Equipment 120" /></p>
+<p>In 1.3.0, this approach is not used anymore.<br />
+User can instead set any amount of equipment they need on the character by changing the <vr>EquipmentSet</vr> value of the <strong>TwinGunHandler</strong>.  </p>
+<p><img alt="Equipment130" src="../../images/FemaleShooter/Equipment130.jpg" title="Equipment 130" /></p>
+<p>For details on how to do this, see <a href="../equipmentset" title="Equipment Set Guide">Equipment Set Guide</a>.  </p>
+<hr />
+<h2 id="custom-animations">Custom Animations</h2>
+<p>Starting from version 1.2.0, you can substitute the default animations included in Female Shooter template with your own custom animations.<br />
+In 1.2.0, the animation variables used to implement custom animations are placed exclusively inside <strong>GunnerGirlComponent</strong>.  </p>
+<p>In 1.3.0, half of the animations was relocated.<br />
+The gun-related animations are now assigned to <strong>TwinGunHandler</strong>, while the locomotion parts still assigned to <strong>GunnerGirlComponent</strong>.</p>
+<p><img alt="AnimationChanges" src="../../images/FemaleShooter/animationchanges.jpg" title="AnimationChanges" /></p>
+<p>For more details on the new custom animation system, see the <a href="../customanim" title="Custom Animations Guide">Custom Animations Guide</a>.  </p>
+<hr />
+<h2 id="notify-events">Notify Events</h2>
+<p>There's also changes to the notification system used to communicate between the animations and the components.  </p>
+<p>In 1.2.0, <strong>AnimNotify</strong> is used to trigger actions from the animation, with additional code written inside the Animation Blueprint.  </p>
+<p>In 1.3.0, gun related animations uses <strong>TwinGunNotify</strong>, while locomotion related animations uses <strong>GunnerGirlNotify</strong>.<br />
+This is done to facilitate the sub-graph approach, minimize the amount of code that needs to be written on the Animation Blueprint, and to let the notification be sent directly to the components.  </p>
+<p><img alt="NewNotify" src="../../images/FemaleShooter/newnotify.jpg" title="NewNotify" /></p>
+<p>For the list of notify events used by the FemaleShooter template, see <a href="../customanim#notify-events" title="Notify Events">this article</a>.</p>
+<hr />
+<h2 id="animation-blueprints">Animation Blueprints</h2>
+<p>In 1.3.0, two new Animation Blueprints was added.  </p>
+<ul>
+<li><strong>GunnerMovement_AnimBP</strong>, containing the animation control for the gunner girl's locomotion system</li>
+<li><strong>TwinGun_AnimBP</strong>, containing the animation control for the shooting system</li>
+</ul>
+<p><img alt="NewAnimBP" src="../../images/FemaleShooter/NewAnimBP.jpg" title="NewAnimBP" /></p>
+<p>These animation blueprints can be used independently from each other.<br />
+Both of them are meant to be used using a sub-graph approach.  </p>
+<p>There are 2 examples given on how to use these new animation blueprints.  </p>
+<p>The example where <strong>TwinGun_AnimBP</strong> is used and blended with the default ThirdPerson_Character animation blueprint can be found in,<br />
+<strong>Content/FemaleShooter/Asset/GunnerGirl/Anim/UE4_Mannequin_Animation/ThirdPersonMod_AnimBP</strong>.  </p>
+<p><img alt="ThirdPersonModAnimBP" src="../../images/FemaleShooter/ThirdPersonModAnimBP.jpg" title="ThirdPersonModAnimBP" /></p>
+<p>While example for the animation blueprint that was used for the Female Shooter demo can be found in, <br />
+<strong>Content/FemaleShooter/Asset/GunnerGirl/Anim/GunnerGirl_AnimBP</strong>.  </p>
+<p><img alt="GGAnimBPLocation" src="../../images/FemaleShooter/GGAnimBPLocation.jpg" title="GGAnimBPLocation" /></p>
+<p>For more details on how to use the animation blueprints, see the <a href="../setupanimsystem" title="Setup Animation Guide">Setup Animation Guide</a>.  </p>
+<hr />
+<h2 id="shooting-pattern">Shooting Pattern</h2>
+<p>Starting from 1.3.0, you can adjust the Shooting Pattern of your character.<br />
+This will affect the timing as well as the gunhand that you use to shoot a projectile.  </p>
+<p><img alt="ShootingPattern" src="../../images/FemaleShooter/ShootingPattern.jpg" title="ShootingPattern" /></p>
+<p>Details can be seen in <a href="../shootingpattern" title="Shooting Pattern Guide">Shooting Pattern Guide</a>.  </p>
+<hr />
+<h2 id="multiplayer-replication-not-supported">Multiplayer Replication (Not Supported)</h2>
+<p>Multiplayer replication is not supported as of version 1.3.0.<br />
+This is mostly due to difficulties in maintaining and testing the replications with several new features introduced into the package.  </p>
+<hr />
+<h2 id="next-steps">Next Steps</h2>
+<p>To learn further on how to implement the FemaleShooter 1.3.0 package into your project, see the <a href="../templateoverview" title="Template Overview">next page</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../VersionHistory/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Version History
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../templateoverview/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Template Overview
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a1609d9a.min.js"></script>
+      
+    
+  </body>
+</html>
