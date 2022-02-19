@@ -784,6 +784,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#high-heels-modifier" class="md-nav__link">
+    High Heels Modifier
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -834,6 +841,41 @@ You just need to use <strong>EquipmentSet</strong> as your chosen Data Asset cla
 <p>The identifiers for the guns that you registered in this EquipmentSet should match the value of <vr>LeftGunIdentifier</vr> and <vr>RightGunIdentifier</vr> on your <strong>TwinGunHandler</strong> component.<br />
 This is mandatory so that the system can figure out which entries from your EquipmentSet are to be used as the guns.  </p>
 <p><img alt="GunIdentifier" src="../../images/FemaleShooter/GunIdentifier.jpg" title="GunIdentifier" /></p>
+<hr />
+<h2 id="high-heels-modifier">High Heels Modifier</h2>
+<p>Starting from version 1.3.2, <strong>High Heels Settings</strong> can now be found inside the <strong>EquipmentSet</strong>.<br />
+This setting can be used to make the template works for both flat footed and high heeled character.  </p>
+<p><img alt="HighHeelsMod" src="../../images/FemaleShooter/HighHeelsMod.jpg" title="HighHeelsMod" /></p>
+<p>There are 2 settings that can be changed,  </p>
+<ul>
+<li>
+<p><vr>HeightOffset</vr>, used to add the extra height caused by the heels  </p>
+</li>
+<li>
+<p><vr>RotationOffset</vr>, used to adjust the angle of the heels  </p>
+</li>
+</ul>
+<p><blocknote>
+As of version 1.3.2, the template does not automatically adjust the height of the heels.<br />
+User will need to adjust this manually.
+</blocknote></p>
+<hr />
+<p>After setting the values in the EquipmentSet, make sure to do the following,</p>
+<ul>
+<li>
+<p>Add the <strong>HighHeelComponent</strong> to your character</p>
+<p><img alt="HighHeelsComponent" src="../../images/FemaleShooter/HighHeelsComponent.jpg" title="HighHeelsComponent" /></p>
+<hr />
+</li>
+<li>
+<p>Add a sub-graph of <strong>HighHeel_AnimBP</strong> to your character's animation blueprint</p>
+<p><img alt="HighHeelsAnimBPPath" src="../../images/FemaleShooter/HighHeelsAnimBPPath.jpg" title="HighHeelsAnimBPPath" /></p>
+<p><img alt="HighHeelsSubGraph" src="../../images/FemaleShooter/HighHeelsSubGraph.jpg" title="HighHeelsSubGraph" /></p>
+<hr />
+<p>It's recommended to add the sub-graph right at the end before the <strong>Final Animation Pose</strong> node.  </p>
+<p><img alt="HighHeelsSubGraph2" src="../../images/FemaleShooter/HighHeelsSubGraph2.jpg" title="HighHeelsSubGraph2" /></p>
+</li>
+</ul>
 <hr />
                 
               
