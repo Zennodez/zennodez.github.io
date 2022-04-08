@@ -753,8 +753,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#retargeting" class="md-nav__link">
-    Retargeting
+  <a href="#retargeting-preparation-guide" class="md-nav__link">
+    Retargeting Preparation Guide
   </a>
   
 </li>
@@ -799,8 +799,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#retargeting" class="md-nav__link">
-    Retargeting
+  <a href="#retargeting-preparation-guide" class="md-nav__link">
+    Retargeting Preparation Guide
   </a>
   
 </li>
@@ -820,8 +820,43 @@
                 
                 <h1 id="female-shooter-user-guide">Female Shooter - User Guide</h1>
 <hr />
-<h2 id="retargeting">Retargeting</h2>
-<p>To be added.</p>
+<h2 id="retargeting-preparation-guide">Retargeting Preparation Guide</h2>
+<p><blocknote>
+This guide assumes that you are using a humanoid styled mesh and skeleton.
+</blocknote></p>
+<p>To ensure that the retargeting process can be done correctly, there are several steps that you need to perform.  </p>
+<ul>
+<li>Open the skeleton file of the mesh that you wish to use for your project.  </li>
+<li>Open the <strong>Retarget Manager</strong> panel. <subnote>(by default, it should be located on the left side of the screen, next to <strong>Skeleton Tree</strong>)</subnote></li>
+<li>Go to the <strong>'Set Up Rig'</strong> section, open the <strong>'Select Rig'</strong> dropdown, choose <strong>'Select Humanoid Rig'</strong>.</li>
+</ul>
+<p><img alt="RetargetSkeleton01" src="../../images/FemaleShooter/retargetskeleton01.jpg" title="RetargetSkeleton01" /></p>
+<p>Once selected, there will be a list of bone names listed below this dropdown, separated into 2 columns, <strong>'Source'</strong> and <strong>'Target'</strong>.<br />
+If your model's skeleton structure is compatible with Unreal, the editor will most likely already fill the values of your <strong>'Target'</strong> column.</p>
+<p><img alt="RetargetSkeleton02" src="../../images/FemaleShooter/retargetskeleton02.jpg" title="RetargetSkeleton02" /></p>
+<p>However, if your model's skeleton structure is not compatible with Unreal, you might need to manually provide the the values yourself.<br />
+Try matching each of the bones used in your model with the ones that is most closely related in the Unreal skeleton.</p>
+<p><img alt="RetargetSkeleton03" src="../../images/FemaleShooter/retargetskeleton03.jpg" title="RetargetSkeleton03" /></p>
+<p>Once that's done, make sure to adjust the pose of your model so that it resembles the A-Pose used by Unreal's third person mannequin model or the GunnerGirl model.<br />
+You can do that by choosing the bones from the <strong>Skeleton Tree</strong>, and then manipulate the pose on the same window using the editor's gizmo.  </p>
+<p><img alt="RetargetSkeleton03b" src="../../images/FemaleShooter/retargetskeleton03b.jpg" title="RetargetSkeleton03b" /></p>
+<p><img alt="RetargetSkeleton04" src="../../images/FemaleShooter/retargetskeleton04.jpg" title="RetargetSkeleton04" /></p>
+<p>Once the A-Pose is ready, do the following,</p>
+<ul>
+<li>Go to the <strong>Retarget Manager</strong> panel</li>
+<li>Navigate to the <strong>Manage Retarget Base Pose</strong> section</li>
+<li>Press <strong>Modify Pose</strong></li>
+<li>Select <strong>Use Current Pose</strong></li>
+</ul>
+<p><img alt="RetargetSkeleton05" src="../../images/FemaleShooter/retargetskeleton05.jpg" title="RetargetSkeleton05" /></p>
+<p>After that, </p>
+<ul>
+<li>Navigate to the <strong>Preview Scene Setting</strong> panel. <subnote>(By default it should be located on the right side of the screen, next to the <strong>Details</strong> tab)</subnote></li>
+<li>If there is an  <strong>'Apply to Asset'</strong> button available there, make sure to press it.</li>
+<li>Save your skeleton file afterwards.</li>
+</ul>
+<p><img alt="RetargetSkeleton06" src="../../images/FemaleShooter/retargetskeleton06.jpg" title="RetargetSkeleton06" /></p>
+<p>You can proceed with the rest of the <a href="../../FemaleShooter/setupanimsystem/#retarget-the-animation-blueprint">retargeting process</a> once these steps are performed.  </p>
 <hr />
                 
               
