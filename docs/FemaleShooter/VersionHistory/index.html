@@ -264,6 +264,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ver-140" class="md-nav__link">
+    Ver 1.4.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ver-132" class="md-nav__link">
     Ver 1.3.2
   </a>
@@ -834,6 +841,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ver-140" class="md-nav__link">
+    Ver 1.4.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ver-132" class="md-nav__link">
     Ver 1.3.2
   </a>
@@ -889,6 +903,103 @@
                 
                 
                 <h1 id="female-shooter-version-history">Female Shooter - Version History</h1>
+<hr />
+<h2 id="ver-140">Ver 1.4.0</h2>
+<ul>
+<li>
+<p>Added new shooting range map (Content/FemaleShooter/Map/Map06)</p>
+</li>
+<li>
+<p>Added target circle actor with health component<br />
+    Comes with variable damage, depending on where the shot hits the target circle</p>
+</li>
+<li>
+<p>Added multi-weapon equipment, carry, and swap</p>
+</li>
+<li>
+<p>Added 2 new placeholder weapon, boomstick and autogun</p>
+</li>
+<li>
+<p>Simplified gun system</p>
+<ul>
+<li>Implement gunspin using code instead of animation  </li>
+<li>Moved weapon actors from Content/FemaleShooter/Asset to Content/FemaleShooter/Blueprints/Weapons   </li>
+<li>Add gunspin rotation speed and direction parameter that can be controlled from HandgunComponent  </li>
+<li>Removed gun animations (not required for gunspin)   </li>
+<li>Added auto gun setup helper function</li>
+</ul>
+</li>
+<li>
+<p>Added recoil effect to the camera</p>
+</li>
+<li>
+<p>Added gunshot mark <subnote>(by default applied to target circle only)</subnote></p>
+</li>
+<li>
+<p>Equipment system update</p>
+<ul>
+<li>Code rewrite  </li>
+<li>Implement option to either detach or destroy the equipment once removed  </li>
+<li>Added individual weapon pickup and drop system  </li>
+</ul>
+</li>
+<li>
+<p>Added 4 new camera control functions to GunnerGirl_Component</p>
+<ul>
+<li>GamepadTurnHorizontal  </li>
+<li>GamepadTurnVertical  </li>
+<li>MouseTurnHorizontal  </li>
+<li>MouseTurnVertical  </li>
+</ul>
+<p><blocknote>
+It is recommended to use these functions instead of the CameraTurnHorizontal/CameraTurnVertical<br />
+These functions are added to facilitate control over camera sensitivity settings<br />
+</blocknote></p>
+</li>
+<li>
+<p>Added aiming sensititiy modifier (for both gamepad and mouse)</p>
+</li>
+<li>
+<p>Adjusted camera lag to make exploration and aiming feels less 'floaty'</p>
+</li>
+<li>
+<p>Changed demo's minimum desired framerate to 120 FPS</p>
+</li>
+<li>
+<p>Added UI: Camera Settings</p>
+<ul>
+<li>Gamepad Camera Axis control (Inverted/Normal)  </li>
+<li>Mouse Camera Axis control (Inverted/Normal)  </li>
+<li>Gamepad Camera sensitivity  </li>
+<li>Mouse Camera sensitivity  </li>
+<li>Gamepad Aim Modifier  </li>
+<li>Mouse Aim Modifier  </li>
+</ul>
+</li>
+<li>
+<p>Added UI: Gameplay Settings</p>
+<ul>
+<li>Option to activate/deactivate auto-strafe when guns equipped  </li>
+<li>Option to activate/deactivate Gun Recoil   </li>
+<li>Gun Recoil modifier, control how strong the recoil effect is during normal shooting  </li>
+<li>Gun Recoil modifier for aim mode  </li>
+</ul>
+</li>
+<li>
+<p>Added UI: Graphic Settings  </p>
+<ul>
+<li>Screen resolutions  </li>
+<li>Screen mode  </li>
+<li>Volumetric Fog  </li>
+<li>Exponential Fog Density  </li>
+</ul>
+</li>
+<li>
+<p><subnote>[BUGFIX]</subnote> Gun stop spinning if equipment is changed during spinning<br />
+    Fixed by adding an optional function to synchronize the gunspinning mechanism to TwinGunHandler  </p>
+</li>
+</ul>
+<hr />
 <h2 id="ver-132">Ver 1.3.2</h2>
 <ul>
 <li>
