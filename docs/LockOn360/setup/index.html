@@ -14,7 +14,7 @@
     
     
       
-        <title>Setup - Zennodez Arts - Lock-On 360 Documentation</title>
+        <title>Lock-On Setup - Zennodez Arts - Lock-On 360 Documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lock-on-360-setup" class="md-skip">
+        <a href="#lock-on-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup
+              Lock-On Setup
             
           </span>
         </div>
@@ -209,12 +209,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Setup
+          Lock-On Setup
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Setup
+        Lock-On Setup
       </a>
       
         
@@ -241,6 +241,13 @@
         <li class="md-nav__item">
   <a href="#lock-on-component-setup" class="md-nav__link">
     Lock-On component setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-setup" class="md-nav__link">
+    Camera Setup
   </a>
   
 </li>
@@ -301,6 +308,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../targetsetup/" class="md-nav__link">
+        Target Setup
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -336,6 +358,13 @@
         <li class="md-nav__item">
   <a href="#lock-on-component-setup" class="md-nav__link">
     Lock-On component setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-setup" class="md-nav__link">
+    Camera Setup
   </a>
   
 </li>
@@ -401,7 +430,7 @@
               
                 
                 
-                <h1 id="lock-on-360-setup">Lock-On 360 - Setup</h1>
+                <h1 id="lock-on-setup">Lock-On Setup</h1>
 <hr />
 <h2 id="prepare-a-characteractor">Prepare a character/actor</h2>
 <p>First of all, make sure you have a character/actor ready for the project.  </p>
@@ -431,6 +460,11 @@ Press the button and add the following components:  </p>
 </li>
 </ul>
 <p><img alt="LockOnManager" src="../images/LockOnManager.jpg" title="LockOnManager" /></p>
+<hr />
+<h2 id="camera-setup">Camera Setup</h2>
+<p>To ensure that the target switching can be performed smoothly, make sure to attach your camera to a <strong>SpringArm</strong> component. <br />
+The <strong>EnableCameraRotationLag</strong> property of the SpringArm will need to be set to <strong>true</strong> for this to work.  </p>
+<p><img alt="SpringArmSetting" src="../images/SpringArmSetting.jpg" title="SpringArmSetting" /></p>
 <hr />
 <h2 id="functionality-setup">Functionality setup</h2>
 <p>Inside the LockOnCharacter, there are several nodes grouped under different colors.<br />
@@ -510,6 +544,20 @@ Please make sure to connect your camera and movement control nodes to these even
           </div>
         </a>
       
+      
+        <a href="../targetsetup/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Target Setup
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
