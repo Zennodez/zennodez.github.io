@@ -261,22 +261,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setup-nodes" class="md-nav__link">
-    Setup Nodes
+  <a href="#add-setup-nodes" class="md-nav__link">
+    Add Setup Nodes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#activatedeactivatetoggle-lock-on" class="md-nav__link">
-    Activate/Deactivate/Toggle Lock-On
+  <a href="#how-to-activatedeactivate-lock-on" class="md-nav__link">
+    How to Activate/Deactivate Lock-On
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#switching-targets" class="md-nav__link">
-    Switching Targets
+  <a href="#how-to-switch-target" class="md-nav__link">
+    How to Switch Target
   </a>
   
 </li>
@@ -378,22 +378,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setup-nodes" class="md-nav__link">
-    Setup Nodes
+  <a href="#add-setup-nodes" class="md-nav__link">
+    Add Setup Nodes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#activatedeactivatetoggle-lock-on" class="md-nav__link">
-    Activate/Deactivate/Toggle Lock-On
+  <a href="#how-to-activatedeactivate-lock-on" class="md-nav__link">
+    How to Activate/Deactivate Lock-On
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#switching-targets" class="md-nav__link">
-    Switching Targets
+  <a href="#how-to-switch-target" class="md-nav__link">
+    How to Switch Target
   </a>
   
 </li>
@@ -431,6 +431,9 @@
                 
                 
                 <h1 id="lock-on-setup">Lock-On Setup</h1>
+<p><blocknote>
+These steps are performed on the character/actor that you wish to add the lock-on functionality to, not the target.<br />
+</blocknote></p>
 <hr />
 <h2 id="prepare-a-characteractor">Prepare a character/actor</h2>
 <p>First of all, make sure you have a character/actor ready for the project.  </p>
@@ -441,9 +444,8 @@ This is the character used for the LockOn360 demo, you can use this as your refe
 The <strong>LockOnCharacter</strong> example is more or less compatible with Unreal's <strong>ThirdPersonCharacter</strong>.   </p>
 <hr />
 <h2 id="lock-on-component-setup">Lock-On component setup</h2>
-<p><blocknote>
-This step should be performed on the character/actor that you wish to give the lock-on functionality to.<br />
-</blocknote></p>
+<p>Next is to add a LockOnManager component towards the actor/character.<br />
+You will need to do this to the character/actor that you wish to give the lock-on functionality to.</p>
 <p>Navigate to the character/actor blueprint, open the file.  </p>
 <p>Inside the component tab <subnote>(usually placed at the top left of the editor)</subnote>, there should be an <strong>"Add Component"</strong> button.<br />
 Press the button and add the following components:  </p>
@@ -465,49 +467,62 @@ Press the button and add the following components:  </p>
 <p>To ensure that the target switching can be performed smoothly, make sure to attach your camera to a <strong>SpringArm</strong> component. <br />
 The <strong>EnableCameraRotationLag</strong> property of the SpringArm will need to be set to <strong>true</strong> for this to work.  </p>
 <p><img alt="SpringArmSetting" src="../images/SpringArmSetting.jpg" title="SpringArmSetting" /></p>
+<p>If the camera setups above are not performed, the lock-on target switch will be performend without any smooth easing/transition.  </p>
 <hr />
 <h2 id="functionality-setup">Functionality setup</h2>
 <p>Inside the LockOnCharacter, there are several nodes grouped under different colors.<br />
-Explanation about the colored nodes are given below.</p>
-<h3 id="setup-nodes">Setup Nodes</h3>
+These will need to be added to your character/actor depending on your requirements.  </p>
+<p>Explanation about the colored nodes are given below.</p>
+<h3 id="add-setup-nodes">Add Setup Nodes</h3>
 <p>The LockOnManager.Setup node is mandatory and needs to be called before using any of the other functions.</p>
 <p><img alt="LockOnSetup" src="../images/LockOnSetup.jpg" title="LockOnSetup" /></p>
 <p>The SetupDemoUI node is optional and can be removed/ignored, it's mostly used for demo purposes.</p>
 <p><img alt="OptionalSetup" src="../images/OptionalSetup.jpg" title="OptionalSetup" /></p>
 <hr />
-<h3 id="activatedeactivatetoggle-lock-on">Activate/Deactivate/Toggle Lock-On</h3>
+<h3 id="how-to-activatedeactivate-lock-on">How to Activate/Deactivate Lock-On</h3>
 <p>There are 3 functions that can be used to activate/deactivate the Lock-On system.  </p>
 <ul>
 <li><strong>ToggleLockOn</strong>  </li>
 <li><strong>ActivateLockOn</strong>  </li>
 <li><strong>DeactivateLockOn</strong>  </li>
 </ul>
-<p>For demo purpose, the ToggleLockOn function is used as the default action.  </p>
+<p>Each nodes performs the action that their names implied.<br />
+For demo purpose, the <strong>ToggleLockOn</strong> function is used as the default action on the example <strong>LockOnCharacter</strong>.  </p>
+<p>You should add it to </p>
 <p><img alt="Toggle" src="../images/Toggle.jpg" title="Toggle" /></p>
 <hr />
-<h3 id="switching-targets">Switching Targets</h3>
+<h3 id="how-to-switch-target">How to Switch Target</h3>
 <p>Switching targets are performed by doing a quick flick towards the direction of the next target.  <br />
 Separate functions are provided depending on whether you flick using a mouse or a gamepad thumbstick.  </p>
 <p><img alt="MouseFlick" src="../images/MouseFlick.jpg" title="MouseFlick" />
 <img alt="GamepadFlick" src="../images/GamepadFlick.jpg" title="GamepadFlick" /></p>
 <hr />
 <h3 id="orbiting-around-the-target">Orbiting Around the Target</h3>
-<p>Use the TryOrbitForward and TryOrbitRight function to move the character around the target during Lock-On.  </p>
+<p>Use the TryOrbitForward and TryOrbitRight function to move the character around the target during Lock-On.<br />
+This should be used to replace normal movement when the lock-on is active.  </p>
 <p><img alt="GamepadOrbit" src="../images/GamepadOrbit.jpg" title="GamepadOrbit" />
 <img alt="KeyboardOrbit" src="../images/KeyboardOrbit.jpg" title="KeyboardOrbit" /></p>
 <hr />
 <h3 id="normal-camera-control-and-movement">Normal Camera Control and Movement</h3>
-<p>The LockOnManager have 4 important events that you will need to register in your character.  </p>
+<p>The lock-on system expects that you connect the direct values from your movement and camera inputs to the <strong>LockOnManager</strong>'s orbit and flick functions.<br />
+Due to this, to perform normal camera and movement control <subnote>(when the lock-on is off)</subnote>, you will need to add the following events in your character/actor.  </p>
+<p>For camera control:  </p>
 <ul>
-<li><strong>OnDefaultCameraYaw</strong></li>
-<li><strong>OnDefaultCameraPitch</strong></li>
+<li><strong>OnGamepadCameraYaw</strong></li>
+<li><strong>OnGamepadCameraPitch</strong></li>
+<li><strong>OnMouseCameraYaw</strong></li>
+<li><strong>OnMouseCameraPitch</strong></li>
+</ul>
+<p><img alt="NormalCameraControl_Gamepad" src="../images/NormalCameraControl_Gamepad.jpg" title="NormalCameraControl_Gamepad" />
+<img alt="NormalCameraControl_Mouse" src="../images/NormalCameraControl_Mouse.jpg" title="NormalCameraControl_Mouse" /></p>
+<p>For normal movement:  </p>
+<ul>
 <li><strong>OnDefaultMoveForward</strong></li>
 <li><strong>OnDefaultMoveRight</strong></li>
 </ul>
+<p><img alt="NormalMovement" src="../images/NormalMovement.jpg" title="NormalMovement" /></p>
 <p>These nodes ensure that normal camera control and movement can be processed when the Lock-On is disabled.<br />
-Please make sure to connect your camera and movement control nodes to these events.  </p>
-<p><img alt="NormalCameraControl" src="../images/NormalCameraControl.jpg" title="NormalCameraControl" />
-<img alt="NormalMovement" src="../images/NormalMovement.jpg" title="NormalMovement" /></p>
+Do make sure to connect your camera and movement control nodes to these events.  </p>
                 
               
               
