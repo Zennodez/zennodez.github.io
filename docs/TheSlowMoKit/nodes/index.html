@@ -1,0 +1,589 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>Functions and Events - Zennodez Arts - The Slow Mo Kit Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#functions-and-events" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Zennodez Arts - The Slow Mo Kit Documentation" class="md-header__button md-logo" aria-label="Zennodez Arts - The Slow Mo Kit Documentation" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zennodez Arts - The Slow Mo Kit Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Functions and Events
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Zennodez Arts - The Slow Mo Kit Documentation" class="md-nav__button md-logo" aria-label="Zennodez Arts - The Slow Mo Kit Documentation" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Zennodez Arts - The Slow Mo Kit Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zennodez.com/docs" class="md-nav__link">
+        Back to Main Page
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versionhistory/" class="md-nav__link">
+        Version History
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        How to use the package
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customization/" class="md-nav__link">
+        Details and settings
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Functions and Events
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Functions and Events
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#camera-control" class="md-nav__link">
+    Camera Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slow-mo-status" class="md-nav__link">
+    Slow Mo Status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-settings" class="md-nav__link">
+    Modify Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activation-functions" class="md-nav__link">
+    Activation Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    Events
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#camera-control" class="md-nav__link">
+    Camera Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slow-mo-status" class="md-nav__link">
+    Slow Mo Status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-settings" class="md-nav__link">
+    Modify Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activation-functions" class="md-nav__link">
+    Activation Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    Events
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="functions-and-events">Functions and Events</h1>
+<p>The following are a list of functions/events that you can use to interact with the SlowMoComponent.  </p>
+<hr />
+<h2 id="camera-control">Camera Control</h2>
+<ul>
+<li>
+<p><strong>Add Control Pitch</strong>  </p>
+<p>Used to rotate the camera up and down.  </p>
+<p><img alt="FX_AddControlPitch" src="../images/FX_AddControlPitch.jpg" title="FX_AddControlPitch" /></p>
+</li>
+<li>
+<p><strong>Add Control Yaw</strong>  </p>
+<p>Used to rotate the camera left and right.  </p>
+<p><img alt="FX_AddControlYaw" src="../images/FX_AddControlYaw.jpg" title="FX_AddControlYaw" /></p>
+</li>
+</ul>
+<hr />
+<h2 id="slow-mo-status">Slow Mo Status</h2>
+<ul>
+<li>
+<p><strong>IsSlowMoActive</strong>  </p>
+<p>Current status of the Slow Mo effect.<br />
+Returns <vr>true</vr> if Slow Mo is active, returns <vr>false</vr> otherwise.    </p>
+<p><img alt="GET_IsSlowMoActive" src="../images/GET_IsSlowMoActive.jpg" title="GET_IsSlowMoActive" /></p>
+</li>
+</ul>
+<hr />
+<h2 id="modify-settings">Modify Settings</h2>
+<ul>
+<li>
+<p><strong>Reset Settings</strong>  </p>
+<p>Reset the SlowMoComponent settings to its default values (the values at the start of the game).  </p>
+<p>This function needs to be called before updating the rest of the settings.<br />
+If this function is not called beforehand, the previous setups will be carried over to the new one.  </p>
+<p><fx>UpdateSettings</fx> need to be called afterwards to finalize the setup.  </p>
+<p><img alt="FX_ResetSettings" src="../images/FX_ResetSettings.jpg" title="FX_ResetSettings" /></p>
+</li>
+<li>
+<p><strong>Slow Mo Time Settings</strong></p>
+<p>Updates the values of Slow Mo Time Settings.<br />
+Make sure to call <fx>UpdateSettings</fx> afterwards to finalize the changes.  </p>
+<p>See <a href="../customization" title="Details and Settings">Details and Settings</a> for detailed explanation of the parameters.  </p>
+<p><img alt="FX_SlowMoTimeSettings" src="../images/FX_SlowMoTimeSettings.jpg" title="FX_SlowMoTimeSettings" /></p>
+</li>
+<li>
+<p><strong>Slow Mo Camera Control</strong></p>
+<p>Updates the values of Slow Mo Camera Control.<br />
+Make sure to call <fx>UpdateSettings</fx> afterwards to finalize the changes.  </p>
+<p>See <a href="../customization" title="Details and Settings">Details and Settings</a> for detailed explanation of the parameters.  </p>
+<p><img alt="FX_SlowMoCameraControl" src="../images/FX_SlowMoCameraControl.jpg" title="FX_SlowMoCameraControl" /></p>
+</li>
+<li>
+<p><strong>Slow Mo Visual Effect</strong></p>
+<p>Updates the values of Slow Mo Visual Effect.<br />
+Make sure to call <fx>UpdateSettings</fx> afterwards to finalize the changes.  </p>
+<p>See <a href="../customization" title="Details and Settings">Details and Settings</a> for detailed explanation of the parameters.  </p>
+<p><img alt="FX_SlowMoVisualEffect" src="../images/FX_SlowMoVisualEffect.jpg" title="FX_SlowMoVisualEffect" /></p>
+</li>
+<li>
+<p><strong>Slow Mo Visual Effect Override</strong></p>
+<p>Updates the values of Slow Mo Visual Effect Override.<br />
+Make sure to call <fx>UpdateSettings</fx> afterwards to finalize the changes.  </p>
+<p>See <a href="../customization" title="Details and Settings">Details and Settings</a> for detailed explanation of the parameters.  </p>
+<p><img alt="FX_SlowMoVisualEffectOverride" src="../images/FX_SlowMoVisualEffectOverride.jpg" title="FX_SlowMoVisualEffectOverride" /></p>
+</li>
+<li>
+<p><strong>Slow Mo SFX</strong></p>
+<p>Updates the values of Slow Mo SFX.<br />
+Make sure to call <fx>UpdateSettings</fx> afterwards to finalize the changes.  </p>
+<p>See <a href="../customization" title="Details and Settings">Details and Settings</a> for detailed explanation of the parameters.  </p>
+<p><img alt="FX_SlowMoSFX" src="../images/FX_SlowMoSFX.jpg" title="FX_SlowMoSFX" /></p>
+</li>
+<li>
+<p><strong>Slow Mo Sound Settings</strong></p>
+<p>Updates the values of Slow Mo Sound Settings.<br />
+Make sure to call <fx>UpdateSettings</fx> afterwards to finalize the changes.  </p>
+<p>See <a href="../customization" title="Details and Settings">Details and Settings</a> for detailed explanation of the parameters.  </p>
+<p><img alt="FX_SlowMoSoundSettings" src="../images/FX_SlowMoSoundSettings.jpg" title="FX_SlowMoSoundSettings" /></p>
+</li>
+<li>
+<p><strong>Update Settings</strong></p>
+<p>Finalize and applies the current Slow Mo settings.  </p>
+<p><img alt="FX_UpdateSettings" src="../images/FX_UpdateSettings.jpg" title="FX_UpdateSettings" /></p>
+</li>
+</ul>
+<hr />
+<h2 id="activation-functions">Activation Functions</h2>
+<ul>
+<li>
+<p><strong>Start Slow Motion</strong></p>
+<p>Trigger the start of the Slow Mo effect.</p>
+<p><img alt="FX_StartSlowMotion" src="../images/FX_StartSlowMotion.jpg" title="FX_StartSlowMotion" /></p>
+</li>
+<li>
+<p><strong>Stop Slow Motion</strong></p>
+<p>Trigger the end of the Slow Mo effect.</p>
+<p><img alt="FX_StopSlowMotion" src="../images/FX_StopSlowMotion.jpg" title="FX_StopSlowMotion" /></p>
+</li>
+<li>
+<p><strong>Toggle Slow Motion</strong></p>
+<p>Turn the Slow Mo status on/off, depending on the value of <fx>IsSlowMoActive</fx></p>
+<p><img alt="FX_ToggleSlowMotion" src="../images/FX_ToggleSlowMotion.jpg" title="FX_ToggleSlowMotion" /></p>
+</li>
+</ul>
+<hr />
+<h2 id="events">Events</h2>
+<ul>
+<li>
+<p><strong>InputAxis_DefaultPitch</strong></p>
+<p>Assign your default camera pitch input here, will be called when Slow Mo is inactive  </p>
+<p><img alt="Event_InputAxis_DefaultPitch" src="../images/Event_InputAxis_DefaultPitch.jpg" title="Event_InputAxis_DefaultPitch" /></p>
+</li>
+<li>
+<p><strong>InputAxis_DefaultYaw</strong></p>
+<p>Assign your default camera yaw input here, will be called when Slow Mo is inactive  </p>
+<p><img alt="Event_InputAxis_DefaultYaw" src="../images/Event_InputAxis_DefaultYaw.jpg" title="Event_InputAxis_DefaultYaw" /></p>
+</li>
+<li>
+<p><strong>OnSlowMoStart</strong></p>
+<p>This event will be called when the Slow Mo effect is started.</p>
+<p><img alt="Event_OnSlowMoStart" src="../images/Event_OnSlowMoStart.jpg" title="Event_OnSlowMoStart" /></p>
+</li>
+<li>
+<p><strong>OnSlowMoEnd</strong></p>
+<p>This event will be called when the Slow Mo effect has been turned off completely.</p>
+<p><img alt="Event_OnSlowMoEnd" src="../images/Event_OnSlowMoEnd.jpg" title="Event_OnSlowMoEnd" />  </p>
+</li>
+</ul>
+<hr />
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../customization/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Details and settings
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a1609d9a.min.js"></script>
+      
+    
+  </body>
+</html>
