@@ -413,9 +413,19 @@
 <ul>
 <li>
 <p><strong>IsSlowMoActive</strong>  </p>
-<p>Current status of the Slow Mo effect.<br />
-Returns <vr>true</vr> if Slow Mo is active, returns <vr>false</vr> otherwise.    </p>
+<p>Current status of the Slow Mo effect.  </p>
 <p><img alt="GET_IsSlowMoActive" src="../images/GET_IsSlowMoActive.jpg" title="GET_IsSlowMoActive" /></p>
+<p>@IsSlowMoActive Returns <vr>true</vr> if Slow Mo is active, returns <vr>false</vr> otherwise.    </p>
+</li>
+<li>
+<p><strong>GetTimedProgress</strong>  </p>
+<p>Current status of the time limited Slow Mo effect.  </p>
+<p><img alt="FX_GetTimedProgress" src="../images/FX_GetTimedProgress.jpg" title="FX_GetTimedProgress" /></p>
+<p>@IsActive returns <vr>true</vr> if time limited slow mo is activated, returns <vr>false</vr> otherwise.<br />
+@Count is the amount of time that has passed since TimedSlowMotion is called, value in seconds.<br />
+@Duration is the lifetime of the Slow Mo effect, how long it should last, value in seconds.<br />
+@Progress is the percentage of Count/Duration, value ranges from 0 to 1, 1 means the duration is complete.  </p>
+<p>See <strong>OnTimedUpdated</strong> to access these values from an event.  </p>
 </li>
 </ul>
 <hr />
@@ -495,6 +505,13 @@ Make sure to call <fx>UpdateSettings</fx> afterwards to finalize the changes.  <
 <p>Turn the Slow Mo status on/off, depending on the value of <fx>IsSlowMoActive</fx></p>
 <p><img alt="FX_ToggleSlowMotion" src="../images/FX_ToggleSlowMotion.jpg" title="FX_ToggleSlowMotion" /></p>
 </li>
+<li>
+<p><strong>Timed Slow Motion</strong></p>
+<p>Trigger a time limited Slow Mo, effect will automatically stops after the given duration is passed.<br />
+@Duration is in seconds.  </p>
+<p>Use either <strong>OnTimedUpdate</strong> or <strong>GetTimedProgress</strong> to track the duration status.  </p>
+<p><img alt="FX_TimedSlowMotion" src="../images/FX_TimedSlowMotion.jpg" title="FX_TimedSlowMotion" /></p>
+</li>
 </ul>
 <hr />
 <h2 id="events">Events</h2>
@@ -518,6 +535,15 @@ Make sure to call <fx>UpdateSettings</fx> afterwards to finalize the changes.  <
 <p><strong>OnSlowMoEnd</strong></p>
 <p>This event will be called when the Slow Mo effect has been turned off completely.</p>
 <p><img alt="Event_OnSlowMoEnd" src="../images/Event_OnSlowMoEnd.jpg" title="Event_OnSlowMoEnd" />  </p>
+</li>
+<li>
+<p><strong>OnTimedUpdated</strong></p>
+<p>This event will be called when the time limited Slow Mo values are updated.  </p>
+<p><img alt="Event_OnTimedUpdated" src="../images/Event_OnTimedUpdated.jpg" title="Event_OnTimedUpdated" /> </p>
+<p>@TimeCount is the amount of time that has passed since TimedSlowMotion is called, value in seconds.<br />
+@Duration is the lifetime of the Slow Mo effect, how long it should last, value in seconds.<br />
+@Progress is the percentage of TimeCount/Duration, value ranges from 0 to 1, 1 means the duration is complete.  </p>
+<p>These values can also be accessed using the <strong>GetTimedProgress</strong> function.  </p>
 </li>
 </ul>
 <hr />

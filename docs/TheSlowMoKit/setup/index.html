@@ -396,15 +396,16 @@
 <ul>
 <li>
 <p>Next, you will need to add the functions required to activate/deactivate the slow motion effect.<br />
-    There are 3 nodes that you can use for this.</p>
+    There are 4 nodes that you can use for this.</p>
 <ul>
 <li><strong>StartSlowMotion</strong>, as the name implied, used to start the slow motion effect.  </li>
 <li><strong>StopSlowMotion</strong>, as the name implied, used to stop the slow motion effect.  </li>
 <li><strong>ToggleSlowMotion</strong>, this will toggle the slow motion effect on/off, depending on the current state.  </li>
+<li><strong>TimedSlowMotion</strong>, this will trigger a timed slow motion effect that will last until the given duration (in seconds) is passed.  </li>
 </ul>
-<p><img alt="Triggers" src="../images/Triggers.jpg" title="Triggers" /></p>
+<p><img alt="Triggers2" src="../images/Triggers2.jpg" title="Triggers2" /></p>
 <hr />
-<p>There's at least 2 common ways on how to use these functions.  </p>
+<p>There's at least 3 common ways on how to use these functions.  </p>
 <ul>
 <li>
 <p>If you wish to start/stop the slow motion using a single button press,<br />
@@ -415,6 +416,12 @@
 <p>If you wish to activate the slow motion when a button/trigger is being held down,<br />
     connect the button press input to <strong>StartSlowMotion</strong>, and the button release input to <strong>StopSlowMotion</strong>.  </p>
 <p><img alt="Activation02" src="../images/Activation02.jpg" title="Activation02" /></p>
+</li>
+<li>
+<p>If you wish to activate the slow motion effect, but only for a limited time/duration,<br />
+    you can substitute the StartSlowMotion node in Activation02 and replace it with the <strong>TimedSlowMotion</strong> node instead.<br />
+    Set the duration (in seconds) of the Slow Mo effect in the duration parameter.  </p>
+<p><img alt="Activation03" src="../images/Activation03.jpg" title="Activation03" /></p>
 </li>
 </ul>
 </li>
