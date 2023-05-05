@@ -319,6 +319,36 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        Advanced Settings
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -396,33 +426,43 @@
 <hr />
 <h2 id="overview">Overview</h2>
 <p>Open your character blueprint, select the LockOnManager, then go to the Details tab.<br />
-The settings listed below can be found under the UI section.  </p>
-<p><img alt="UI Customization" src="../images/UICustomization.jpg" title="UI Customization" />  </p>
+You will find a list of settings that you can modify under the UI section to customize your Lock-on display.  </p>
+<p><img alt="UI Customization2" src="../images/UICustomization2.jpg" title="UI Customization2" />  </p>
 <hr />
 <h2 id="customizing-the-active-target-indicator-crosshair">Customizing the Active Target Indicator (Crosshair)</h2>
-<p>When the system found and locked on to a target, a basic crosshair will be shown on the screen.<br />
-This crosshair is a placeholder UI that can be found in <strong>Content/LockOn360/Blueprints/UI/UI_ActiveTarget</strong>.<br />
-It's made of a single image inside a UserWidget.   </p>
-<p>To modify the appearance, you can provide your own custom UserWidget, and set it as the value of <strong>UI_ActiveTarget</strong>.<br />
+<p><vr>UI_ActiveTarget</vr> is the crosshair UI that appears when the system found and locked on to a target.  </p>
+<p>You can set this value to your own custom user widget to customize the appearance.<br />
 Setting this value to <strong>None</strong> will ensure that no UI is shown when the active target is locked on to.</p>
+<p>As of version 1.1.0, 4 variants of crosshair UIs are provided for reference,</p>
+<ul>
+<li><strong>Content/LockOn360/Blueprints/UI/UI_ActiveTarget</strong>  </li>
+<li><strong>Content/LockOn360/Blueprints/UI/UI_ActiveTarget2</strong>  </li>
+<li><strong>Content/LockOn360/Blueprints/UI/UI_DistanceTarget</strong>  </li>
+<li><strong>Content/LockOn360/Blueprints/UI/UI_DistanceTarget2</strong>  </li>
+</ul>
+<p><img alt="UICrosshair_Joined" src="../images/UICrosshair_Joined.jpg" title="UICrosshair_Joined" /></p>
 <hr />
 <h2 id="customizing-the-potential-target-indicator-circle-indicator">Customizing the Potential Target Indicator (Circle Indicator)</h2>
+<p><vr>UI_PotentialTarget</vr> is the UI used to mark all potential targets.<br />
+By default this is set to <strong>Content/LockOn360/Blueprints/UI/UI_ActiveTarget</strong>.  </p>
 <p>When the lock-on is activated, all potential targets that is currently visible on the screen will be marked using a white circle/halo indicator.<br />
 This halo is placed on all potential targets, including the currently active target.  </p>
-<p>Just like the crosshair, this is made from a UserWidget containing a single image, it can be found in <strong>Content/LockOn360/Blueprints/UI/UI_ActiveTarget</strong>.  </p>
-<p>To modify the appearance, you can provide your own custom user widget, and set it as the value of <strong>UI_PotentialTarget</strong>.<br />
+<p>Just like the crosshair, you can set this value to your own custom user widget.<br />
 Setting this value to <strong>None</strong> will remove the UI from all of the potential targets, including the currently active target.</p>
 <hr />
+<p><img alt="LockOnUILines" src="../images/LockOnUILines.jpg" title="LockOnUILines" /></p>
 <h2 id="customizing-the-potential-target-lines">Customizing the Potential Target Lines</h2>
-<p>When a target is found, white lines will be shown coming from the currently active target, pointing towards all the other potential targets that is currently visible on screen.  </p>
-<p>You can turn these lines on/off by changing the value of <strong>IsDrawPotentialLine</strong>.<br />
-To change the line color and transparency, set the <strong>PotentialLineColor</strong> value according to your preference.  </p>
+<p>When a target is found, white lines will be shown coming from the currently active target, pointing towards all the other potential targets that is currently visible on screen.<br />
+The white line is there to help you figure out which target is available for switching, and which direction you'll need to flick to in order to select them.  </p>
+<p>You can turn these lines on/off by changing the value of <vr>IsDrawPotentialLine</vr>.<br />
+To change the line color and transparency, set the <vr>PotentialLineColor</vr> value according to your preference.  </p>
 <hr />
 <h2 id="customizing-the-flick-indicator-line">Customizing the Flick Indicator Line</h2>
 <p>By default, a momentary line visualizing the direction of your flick gesture will be shown when you move either your mouse or gamepad thumbstick.<br />
-This is mostly meant for debug purposes and can be safely turned off it not necessary.  </p>
-<p>You can turn this line on/off by changing the value of <strong>IsDrawFlickLine</strong>.<br />
-To change the line color and transparency, set the <strong>FlickLineColor</strong> value according to your preference.  </p>
+This is mostly used for debug purposes, as an indicator to check where your flick is directed to.<br />
+This line can be disabled during normal gameplay.  </p>
+<p>You can turn this line on/off by changing the value of <vr>IsDrawFlickLine</vr>.<br />
+To change the line color and transparency, set the <vr>FlickLineColor</vr> value according to your preference.  </p>
 <hr />
                 
               
@@ -460,6 +500,20 @@ To change the line color and transparency, set the <strong>FlickLineColor</stron
           </div>
         </a>
       
+      
+        <a href="../settings/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Advanced Settings
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
